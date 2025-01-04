@@ -45,4 +45,38 @@ public class Assignment2 {
             System.out.println("The Simple Interest is : "+ SI);
         }
     }
+    static class operator{
+        public static void main(String[] args) {
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Input 2 numbers: ");
+            double a = sc.nextDouble();
+            double b = sc.nextDouble();
+            System.out.println("Enter an operator(+,-,*,/): ");
+            char operator = sc.next().charAt(0);
+            double result;
+
+            if(operator == '+'){
+                result = a+b;
+                System.out.println("Addition:"+ result);
+            }
+
+            else if(operator == '-'){
+                result = a-b;
+                System.out.println("Subtraction:"+ result);
+            }
+            else if(operator == '*'){
+                result = a+b;
+                System.out.println("Multiplication  :"+ result);
+            }
+            else if(operator == '/'){
+                result = a+b;
+                System.out.println("Division:"+ result);
+            }else {
+                System.out.println("Invalid operator..");
+            }
+            sc.close();
+
+
+        }
+    }
 }
