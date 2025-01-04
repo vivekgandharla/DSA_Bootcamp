@@ -75,8 +75,27 @@ public class Assignment2 {
                 System.out.println("Invalid operator..");
             }
             sc.close();
-
-
+        }
+    }
+    static class largestNumber{
+        public static void main(String[] args) {
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Enter the numbers: ");
+            int num1 = sc.nextInt();
+            int num2 = sc.nextInt();
+            if(num1>num2){
+                System.out.println("num1 is largest: "+num1);
+            }else System.out.println("num2 is largest: "+num2);
+        }
+    }
+    static class currency{
+        public static void main(String[] args) {
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Enter the amount: ");
+            int amount = sc.nextInt();
+            double conversion = 85.76;
+            double dollar = amount/conversion;
+            System.out.printf("The amount in USD is: %.2f\n", dollar);
         }
     }
 }
