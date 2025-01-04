@@ -60,12 +60,21 @@ class que3{
 class que4{
     public static void main(String[] args) {
         Scanner num = new Scanner(System.in);
+        int sum= 0;
         int i = num.nextInt();
-        char x = 'x';
-        int sum = i+i;
-        for(i = 1;i<x;i++){
-            System.out.println(sum);
-            sum = sum + i;
+        while(true){
+            String userInput = num.nextLine();
+            if(userInput.equalsIgnoreCase("x")){
+                break;
+            }
+            try {
+                int number = Integer.parseInt(userInput);
+                sum +=number;
+            }catch (NumberFormatException e){
+                System.out.println("enter valid no or x to exit");
+            }
         }
+        System.out.println("sum of all entered no is "+ sum);
+        num.close();
     }
 }
