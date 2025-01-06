@@ -98,4 +98,11 @@ public class Assignment2 {
             System.out.printf("The amount in USD is: %.2f\n", dollar);
         }
     }
+    class Fibonacci{
+        public static void main(String[] args) {
+            Scanner sc = new Scanner(System.in);
+
+
+        }
+    }
 }
