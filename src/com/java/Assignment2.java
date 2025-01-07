@@ -98,11 +98,94 @@ public class Assignment2 {
             System.out.printf("The amount in USD is: %.2f\n", dollar);
         }
     }
-    class Fibonacci{
+    static class Fibonacci{
         public static void main(String[] args) {
             Scanner sc = new Scanner(System.in);
+            System.out.println("Enter the number of terms in the Fibb series: ");
+            int input = sc.nextInt();
+            int firstTerm = 0, secondTerm = 1;
+            for (int i = 1; i <= input ; i++) {
+                System.out.print(firstTerm + ",");
+                int nextTerm = firstTerm + secondTerm;
+                firstTerm = secondTerm;
+                secondTerm = nextTerm;
 
+            }
+        }
+    }
+    static class palindrome{
+        public static void main(String[] args) {
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Enter the word: ");
+            String str = sc.nextLine();
+            int start = 0;
+            int end = str.length() -1;
+            boolean isPalindrome = true;
+
+            while (start<end){
+                if(str.charAt(start) != str.charAt(end)){
+                    isPalindrome = false;
+                }
+                start++;
+                end--;
+            }
+            if(isPalindrome){
+                System.out.println("Palindrome");
+            }else System.out.println("Not a palindrome");
 
         }
     }
+
+    static class Palindrome1{
+        public static void main(String[] args) {
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Enter the values to check palindrome: ");
+            String str = sc.nextLine();
+            int start = 0;
+            int end = str.length() -1;
+            boolean isPalindrome = true;
+            while (start<end){
+                if(str.charAt(start)!=str.charAt(end)){
+                    isPalindrome = false;
+                    break;
+                }
+                start++;
+                end--;
+            }
+            if(isPalindrome){
+                System.out.println("Palindrome");
+            } else System.out.println("Not a palindrome ");
+        }
+        static class armStrong{
+            public static void main(String[] args) {
+                Scanner sc = new Scanner(System.in);
+                System.out.println("Enter the starting number: ");
+                int start = sc.nextInt();
+                System.out.println("Enter the ending number : ");
+                int end = sc.nextInt();
+
+                System.out.println("Armstrong numbers between"+start+"And "+ end+ ": ");
+
+                for (int i = start; i <= end; i++) {
+                    if(isArmstrong((i))){
+                        System.out.println(i);
+                    }
+                }
+                sc.close();
+
+            }
+        }
+    }public static boolean isArmstrong(int number){
+        int originalNumber = number;
+        int sum = 0;
+        int digits = String.valueOf(number).length();
+
+        while (number>0) {
+            int digit = number%10;
+            sum+=Math.pow(digit,digits);
+            number /= 10;
+        }
+        return sum == originalNumber;
+    }
+
 }
