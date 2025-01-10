@@ -58,4 +58,20 @@ public class Problems1 {
         }
     }
 
+    static public class AoRhombus{
+        public static void main(String[] args) {
+            Scanner sc = new Scanner(System.in);
+            double d1,d2;
+            d1 = sc.nextDouble();
+            d2 = sc.nextDouble();
+
+            if(d1<=0 || d2 <= 0 ){
+                System.out.println("Enter the number in positive!");
+            }
+            else {
+                System.out.println("Area of Rhombus is: "+ d1*d2/2);
+            }
+        }
+    }
+
 }
