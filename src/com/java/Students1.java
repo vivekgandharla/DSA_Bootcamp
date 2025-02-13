@@ -1,6 +1,6 @@
 package com.java;
 
-public class Student1
+class Student1
 {
     private int id, age;
     private String name,city;
