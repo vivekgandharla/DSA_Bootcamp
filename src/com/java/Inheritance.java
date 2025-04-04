@@ -20,9 +20,12 @@ public class Inheritance {
 
     //Multilevel inheritance
 
-    class Puppy extends Animal {
+    static class Puppy extends Animal {
         void weep(){
             System.out.println("Puppy is weeping.");
+        }
+
+        public void bark() {
         }
     }
     static class multilevel{
@@ -30,7 +33,7 @@ public class Inheritance {
             Puppy puppy = new Puppy();
             puppy.eat();
             puppy.weep();
-            puppy.bark()
+            puppy.bark();
         }
     }
     //Hierarchical inheritance
